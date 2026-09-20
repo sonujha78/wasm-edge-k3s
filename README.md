@@ -13,5 +13,5 @@ footprint, scale-to-zero and behaviour on a resource-constrained edge node.
 - [x] 4. Cold-start & memory comparison
 - [x] 5. Scale-to-zero test
 - [x] 6. Edge simulation (1 vCPU / 512MB)
-- [ ] 7. Portability test (x86 vs ARM)
+- [x] 7. (QEMU-emulated arm64) Portability test (x86 vs ARM)
 - [ ] 8. Documentation & trade-off analysis

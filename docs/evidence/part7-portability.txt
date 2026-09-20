@@ -1,0 +1,39 @@
+== host arch: x86_64
+== emulated arm64 check: aarch64
+
+== 1. the WASM artifact (built once on x86_64, never rebuilt)
+host   sha256: 977328a11dda832fae90c85553310e898dce02e31e84440ec978b4352ae6295a
+-rw-rw-r-- 2 sonu sonu 179686 Sep 20 08:51 apps/wasm-echo/target/wasm32-wasip2/release/wasm_echo.wasm
+apps/wasm-echo/target/wasm32-wasip2/release/wasm_echo.wasm: WebAssembly (wasm) binary module version 0x1000d
+
+== 2. run the SAME .wasm on an arm64 Spin runtime
+spin arm64 asset: https://github.com/spinframework/spin/releases/download/v4.0.1/spin-v4.0.1-linux-aarch64.tar.gz
+/tmp/arm64-portability/spin/spin: ELF 64-bit LSB pie executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, BuildID[sha1]=fdf6e9620ae8ed88ac48f5fa4896d726d73933ab, for GNU/Linux 3.7.0, not stripped
+Unable to find image 'ubuntu:24.04' locally
+24.04: Pulling from library/ubuntu
+8a38824eedc5: Pulling fs layer
+a40f4a1a6fd1: Download complete
+8a38824eedc5: Download complete
+8a38824eedc5: Pull complete
+Digest: sha256:008173c23f95b170204355c12626cb5a965d779a7e1283b09e9cffbb1bf33ca3
+Status: Downloaded newer image for ubuntu:24.04
+uname -m inside container: aarch64
+spin inside container:     spin 4.0.1 (5b09e1a 2026-06-09)
+arm64  sha256: 977328a11dda832fae90c85553310e898dce02e31e84440ec978b4352ae6295a
+identical binary: YES
+GET /healthz -> {"status":"ok"}
+GET /echo    -> {"runtime":"wasm","method":"GET","path":"/echo","query":"arch=arm64","user_agent":"curl/8.18.0"}
+
+== 3. the container equivalent needs a SECOND build for arm64
+existing image arch: amd64
+arm64 image build wall time (emulated): 166.850 s
+new image arch:      arm64
+localhost:5000/container-echo:v2-arm64  235kB
+localhost:5000/container-echo:v2  705kB
+localhost:5000/container-echo:v1  704kB
+GET /echo -> {"runtime":"container","method":"GET","path":"/echo","query":"arch=arm64","user_agent":"curl/8.18.0"}
+
+SUMMARY: wasm rebuilds needed: 0 (sha256 identical). container: 1 extra build + 1 extra image per architecture.
+docker: Error response from daemon: no matching manifest for linux/arm64 in the manifest list entries: no match for platform in manifest: not found
+
+Run 'docker run --help' for more information
