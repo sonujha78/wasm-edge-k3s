@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: container-python
+  labels:
+    app: container-python
+    workload-type: container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: container-python
+  template:
+    metadata:
+      labels:
+        app: container-python
+        workload-type: container
+    spec:
+      terminationGracePeriodSeconds: 2
+      containers:
+      - name: container-python
+        image: localhost:5000/container-python:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          periodSeconds: 1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: container-python
+spec:
+  selector:
+    app: container-python
+  ports:
+  - port: 80
+    targetPort: 8080

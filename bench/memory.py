@@ -6,6 +6,7 @@ import csv, glob, json, os, subprocess, sys, time
 WORKLOADS = {
     "wasm":      {"app": "wasm-echo",      "port": 80},
     "container": {"app": "container-echo", "port": 8080},
+    "python": {"app": "container-python", "port": 8080},
 }
 MIB = 1024 * 1024
 
@@ -14,9 +15,32 @@ def run(args):
     return subprocess.run(args, capture_output=True, text=True).stdout.strip()
 
 
+def all_pods(app):
+    out = run(["kubectl", "get", "pod", "-l", f"app={app}", "-o", "json"])
+    return json.loads(out).get("items", []) if out else []
+
+
+def live_pods(app):
+    return [p for p in all_pods(app) if not p["metadata"].get("deletionTimestamp")]
+
+
+def is_ready(p):
+    st = p.get("status", {})
+    ready = any(c["type"] == "Ready" and c["status"] == "True" for c in st.get("conditions", []))
+    return ready and bool(st.get("podIP"))
+
+
+def wait_until(pred, timeout, what):
+    end = time.time() + timeout
+    while time.time() < end:
+        if pred():
+            return
+        time.sleep(0.5)
+    sys.exit(f"timeout waiting for {what}")
+
+
 def pod_of(app):
-    d = json.loads(run(["kubectl", "get", "pod", "-l", f"app={app}", "-o", "json"]))
-    p = d["items"][0]
+    p = [p for p in live_pods(app) if is_ready(p)][0]
     return p["metadata"]["name"], p["metadata"]["uid"], p["status"]["podIP"]
 
 
@@ -81,10 +105,19 @@ def snapshot(name, uid):
     return m
 
 
+def fresh(app):
+    """Restart the workload so 'idle' is a true idle reading (not post-load)."""
+    run(["kubectl", "scale", f"deploy/{app}", "--replicas=0"])
+    wait_until(lambda: not all_pods(app), 90, f"{app} pods to terminate")
+    run(["kubectl", "scale", f"deploy/{app}", "--replicas=1"])
+    wait_until(lambda: any(is_ready(p) for p in live_pods(app)), 120, f"{app} pod Ready")
+
+
 def main():
     os.makedirs("bench/results", exist_ok=True)
     rows = []
     for wl, cfg in WORKLOADS.items():
+        fresh(cfg["app"])
         name, uid, ip = pod_of(cfg["app"])
         print(f"[{wl}] pod={name} ip={ip} -> settling 30s for idle reading")
         time.sleep(30)

@@ -6,6 +6,7 @@ import csv, http.client, json, os, statistics, subprocess, sys, time
 WORKLOADS = {
     "wasm":      {"deploy": "wasm-echo",      "selector": "app=wasm-echo",      "port": 80},
     "container": {"deploy": "container-echo", "selector": "app=container-echo", "port": 8080},
+    "python": {"deploy": "container-python", "selector": "app=container-python", "port": 8080},
 }
 API = ("127.0.0.1", 8001)
 NS = "default"

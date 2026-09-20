@@ -1,0 +1,38 @@
+== wasm: warm-up (discarded)
+wasm 1 30.9
+wasm 2 34.3
+wasm 3 35.9
+wasm 4 33.5
+wasm 5 31.4
+wasm 6 39.5
+wasm 7 34.2
+wasm 8 35.0
+wasm 9 36.6
+wasm 10 36.4
+== container: warm-up (discarded)
+container 1 149.3
+container 2 125.0
+container 3 136.9
+container 4 140.9
+container 5 160.4
+container 6 149.8
+container 7 153.9
+container 8 165.6
+container 9 146.5
+container 10 152.1
+== python: warm-up (discarded)
+python 1 304.4
+python 2 305.4
+python 3 312.0
+python 4 305.4
+python 5 326.1
+python 6 324.0
+python 7 304.3
+python 8 304.0
+python 9 336.5
+python 10 305.6
+
+workload      median      min      max   (ms, launch -> first 200)
+wasm            34.6     30.9     39.5
+container      149.6    125.0    165.6
+python         305.5    304.0    336.5

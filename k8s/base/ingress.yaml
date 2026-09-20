@@ -24,3 +24,13 @@ spec:
             name: container-echo
             port:
               number: 80
+  - host: python.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: container-python
+            port:
+              number: 80
