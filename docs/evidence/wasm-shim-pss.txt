@@ -1,0 +1,10 @@
+pid 406079  PSS=17.0 MiB  /usr/local/bin/containerd-shim-spin-v2 -namespace k8s.io -id 7bc2aa81ffa291ea0c7
+
+pid 406087  PSS=1.4 MiB  /usr/local/bin/containerd-shim-spin-v2 -namespace k8s.io -id 7bc2aa81ffa291ea0c7
+
+pid 406112  PSS=3.5 MiB  /usr/local/bin/containerd-shim-spin-v2 -namespace k8s.io -id 7bc2aa81ffa291ea0c7
+
+pid 406130  PSS=3.5 MiB  /usr/local/bin/containerd-shim-spin-v2 -namespace k8s.io -id 7bc2aa81ffa291ea0c7
+
+pid 406132  PSS=18.0 MiB  /usr/local/bin/containerd-shim-spin-v2 -namespace k8s.io -id 7bc2aa81ffa291ea0c7
+

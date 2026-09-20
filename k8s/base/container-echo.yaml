@@ -19,7 +19,7 @@ spec:
       terminationGracePeriodSeconds: 2
       containers:
       - name: container-echo
-        image: localhost:5000/container-echo:v1
+        image: localhost:5000/container-echo:v2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080

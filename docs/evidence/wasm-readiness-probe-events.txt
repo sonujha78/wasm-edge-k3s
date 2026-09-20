@@ -1,0 +1,15 @@
+LAST SEEN   TYPE      REASON      OBJECT                           MESSAGE
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-28r7v   Readiness probe failed: Get "http://10.42.0.17:80/healthz": dial tcp 10.42.0.17:80: connect: connection refused
+39m         Warning   Unhealthy   pod/wasm-echo-78555b546b-2dtzg   Readiness probe failed: Get "http://10.42.0.14:80/healthz": dial tcp 10.42.0.14:80: connect: connection refused
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-2hsvm   Readiness probe failed: Get "http://10.42.0.22:80/healthz": dial tcp 10.42.0.22:80: connect: connection refused
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-2pwbz   Readiness probe failed: Get "http://10.42.0.20:80/healthz": dial tcp 10.42.0.20:80: connect: connection refused
+9m56s       Warning   Unhealthy   pod/wasm-echo-78555b546b-46g7t   Readiness probe failed: Get "http://10.42.0.39:80/healthz": dial tcp 10.42.0.39:80: connect: connection refused
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-5mtls   Readiness probe failed: Get "http://10.42.0.21:80/healthz": dial tcp 10.42.0.21:80: connect: connection refused
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-5qsxk   Readiness probe failed: Get "http://10.42.0.18:80/healthz": dial tcp 10.42.0.18:80: connect: connection refused
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-5r75s   Readiness probe failed: Get "http://10.42.0.19:80/healthz": dial tcp 10.42.0.19:80: connect: connection refused
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-8sc9v   Readiness probe failed: Get "http://10.42.0.16:80/healthz": dial tcp 10.42.0.16:80: connect: connection refused
+31m         Warning   Unhealthy   pod/wasm-echo-78555b546b-hrjl5   Readiness probe failed: Get "http://10.42.0.25:80/healthz": dial tcp 10.42.0.25:80: connect: connection refused
+31m         Warning   Unhealthy   pod/wasm-echo-78555b546b-j4ws2   Readiness probe failed: Get "http://10.42.0.26:80/healthz": dial tcp 10.42.0.26:80: connect: connection refused
+32m         Warning   Unhealthy   pod/wasm-echo-78555b546b-l6zn2   Readiness probe failed: Get "http://10.42.0.23:80/healthz": dial tcp 10.42.0.23:80: connect: connection refused
+31m         Warning   Unhealthy   pod/wasm-echo-78555b546b-ws7c6   Readiness probe failed: Get "http://10.42.0.24:80/healthz": dial tcp 10.42.0.24:80: connect: connection refused
+48m         Warning   Unhealthy   pod/wasm-echo-7cbf79fcb7-s6vzl   Readiness probe failed: Get "http://10.42.0.12:80/healthz": dial tcp 10.42.0.12:80: connect: connection refused
