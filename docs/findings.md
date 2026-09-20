@@ -129,7 +129,7 @@ The "PASS" at 4 MiB for WASM is a degraded run (~2% of normal throughput), not a
 - The quota only counts pod cgroups. 64 WASM pods cost ~627 MiB of real host RAM, more than the 512 MiB the quota implies, because shim processes sit outside the pod cgroup.
 - Measured host RAM per WASM pod is roughly 10-20 MiB (9.8 MiB average at 64 pods, 13.5 MiB at 40 pods, ~20 MiB slope between N=20 and N=40; `MemAvailable` noise is about +-100 MiB).
   That is roughly 1.5-3x denser than Python and roughly 1.5-2.5x less dense than the static Rust container.
-- The Rust container stopped at 95 Ready pods although quota math allows 128. Likely the node's pod limit (see `docs/evidence/node-max-pods.txt`); not confirmed as the cause.
+- The Rust container stopped at 95 Ready pods although quota math allows 128. Consistent with the node's pod limit: capacity is 110 pods (`docs/evidence/node-max-pods.txt`) and roughly 15 other pods (kube-system, KEDA) were already running, so 95 is a lower bound for the Rust container. The scheduler event was not captured, so the cause is not directly confirmed.
 - The raw sweep is in `results.md`; rows with small N are dominated by measurement noise.
 
 ## 5. Portability
