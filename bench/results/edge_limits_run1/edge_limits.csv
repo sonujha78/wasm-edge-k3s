@@ -1,0 +1,12 @@
+workload,limit_mib,verdict,rps,non2xx,socket_errors,restarts,reason
+wasm,4,PASS,261,0,0,0,
+wasm,8,PASS,10658,0,0,0,
+container,4,PASS,253925,0,0,0,
+container,8,PASS,256404,0,0,0,
+python,4,FAIL,0,0,0,3,OOMKilled
+python,8,FAIL,0,0,0,3,OOMKilled
+python,16,FAIL,0,0,0,3,OOMKilled
+python,24,FAIL,0,0,0,3,OOMKilled
+python,32,FAIL,0,0,0,3,OOMKilled
+python,48,PASS,3135,0,0,0,
+python,64,PASS,3485,0,0,0,

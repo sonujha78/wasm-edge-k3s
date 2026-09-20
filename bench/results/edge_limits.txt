@@ -1,0 +1,16 @@
+{'workload': 'wasm', 'limit_mib': 4, 'verdict': 'PASS', 'rps': 261, 'non2xx': 0, 'socket_errors': 0, 'restarts': 0, 'reason': ''}
+{'workload': 'wasm', 'limit_mib': 8, 'verdict': 'PASS', 'rps': 10658, 'non2xx': 0, 'socket_errors': 0, 'restarts': 0, 'reason': ''}
+{'workload': 'container', 'limit_mib': 4, 'verdict': 'PASS', 'rps': 253925, 'non2xx': 0, 'socket_errors': 0, 'restarts': 0, 'reason': ''}
+{'workload': 'container', 'limit_mib': 8, 'verdict': 'PASS', 'rps': 256404, 'non2xx': 0, 'socket_errors': 0, 'restarts': 0, 'reason': ''}
+{'workload': 'python', 'limit_mib': 4, 'verdict': 'FAIL', 'rps': 0, 'non2xx': 0, 'socket_errors': 0, 'restarts': 3, 'reason': 'OOMKilled'}
+{'workload': 'python', 'limit_mib': 8, 'verdict': 'FAIL', 'rps': 0, 'non2xx': 0, 'socket_errors': 0, 'restarts': 3, 'reason': 'OOMKilled'}
+{'workload': 'python', 'limit_mib': 16, 'verdict': 'FAIL', 'rps': 0, 'non2xx': 0, 'socket_errors': 0, 'restarts': 3, 'reason': 'OOMKilled'}
+{'workload': 'python', 'limit_mib': 24, 'verdict': 'FAIL', 'rps': 0, 'non2xx': 0, 'socket_errors': 0, 'restarts': 3, 'reason': 'OOMKilled'}
+{'workload': 'python', 'limit_mib': 32, 'verdict': 'FAIL', 'rps': 0, 'non2xx': 0, 'socket_errors': 0, 'restarts': 3, 'reason': 'OOMKilled'}
+{'workload': 'python', 'limit_mib': 48, 'verdict': 'PASS', 'rps': 3135, 'non2xx': 0, 'socket_errors': 0, 'restarts': 0, 'reason': ''}
+{'workload': 'python', 'limit_mib': 64, 'verdict': 'PASS', 'rps': 3485, 'non2xx': 0, 'socket_errors': 0, 'restarts': 0, 'reason': ''}
+
+minimum viable memory limit under light load (2 consecutive PASS):
+  wasm      4 MiB
+  container 4 MiB
+  python    48 MiB
