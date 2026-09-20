@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: container-echo
+  labels:
+    app: container-echo
+    workload-type: container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: container-echo
+  template:
+    metadata:
+      labels:
+        app: container-echo
+        workload-type: container
+    spec:
+      containers:
+      - name: container-echo
+        image: localhost:5000/container-echo:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          periodSeconds: 1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: container-echo
+spec:
+  selector:
+    app: container-echo
+  ports:
+  - port: 80
+    targetPort: 8080

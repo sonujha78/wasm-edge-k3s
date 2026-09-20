@@ -1,0 +1,3 @@
+NAME                              RUNTIME_CLASS      READY   IP
+container-echo-588dbc6b9c-ntf8h   <none>             true    10.42.0.13
+wasm-echo-7cbf79fcb7-s6vzl        wasmtime-spin-v2   true    10.42.0.12

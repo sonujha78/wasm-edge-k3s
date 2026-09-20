@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wasm-echo
+  labels:
+    app: wasm-echo
+    workload-type: wasm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wasm-echo
+  template:
+    metadata:
+      labels:
+        app: wasm-echo
+        workload-type: wasm
+    spec:
+      runtimeClassName: wasmtime-spin-v2
+      containers:
+      - name: wasm-echo
+        image: localhost:5000/wasm-echo:v1
+        imagePullPolicy: IfNotPresent
+        command: ["/"]
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          periodSeconds: 1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wasm-echo
+spec:
+  selector:
+    app: wasm-echo
+  ports:
+  - port: 80
+    targetPort: 80

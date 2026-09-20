@@ -8,8 +8,8 @@ footprint, scale-to-zero and behaviour on a resource-constrained edge node.
 
 ## Status
 - [x] 1. Environment setup (K3s + wasm shims)
-- [ ] 2. Build WASM workload (Rust + spin-sdk)
-- [ ] 3. Deploy WASM + container side by side
+- [x] 2. Build WASM workload (Rust + spin-sdk)
+- [x] 3. Deploy WASM + container side by side
 - [ ] 4. Cold-start & memory comparison
 - [ ] 5. Scale-to-zero test
 - [ ] 6. Edge simulation (1 vCPU / 512MB)

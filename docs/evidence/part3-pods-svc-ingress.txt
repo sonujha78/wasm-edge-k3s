@@ -1,0 +1,11 @@
+NAME                                  READY   STATUS    RESTARTS   AGE   IP           NODE   NOMINATED NODE   READINESS GATES
+pod/container-echo-588dbc6b9c-ntf8h   1/1     Running   0          75s   10.42.0.13   jha    <none>           <none>
+pod/wasm-echo-7cbf79fcb7-s6vzl        1/1     Running   0          75s   10.42.0.12   jha    <none>           <none>
+
+NAME                     TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+service/container-echo   ClusterIP   10.43.137.14    <none>        80/TCP    75s   app=container-echo
+service/kubernetes       ClusterIP   10.43.0.1       <none>        443/TCP   28m   <none>
+service/wasm-echo        ClusterIP   10.43.175.125   <none>        80/TCP    75s   app=wasm-echo
+
+NAME                             CLASS     HOSTS                        ADDRESS          PORTS   AGE
+ingress.networking.k8s.io/echo   traefik   wasm.local,container.local   10.231.118.179   80      75s
