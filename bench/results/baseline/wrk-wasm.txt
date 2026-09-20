@@ -1,0 +1,13 @@
+Running 30s test @ http://10.42.0.26:80/healthz
+  2 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.89ms    2.31ms  44.53ms   99.13%
+    Req/Sec     5.83k     1.27k    7.85k    57.97%
+  Latency Distribution
+     50%    1.62ms
+     75%    2.09ms
+     90%    2.52ms
+     99%    3.73ms
+  349156 requests in 30.10s, 46.95MB read
+Requests/sec:  11599.88
+Transfer/sec:      1.56MB

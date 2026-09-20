@@ -1,0 +1,32 @@
+== wasm: warm-up run (discarded)
+wasm 1 {'pod_ip': 582.1, 'running': 582.1, 'first_200': 585.8, 'ready': 1469.8}
+wasm 2 {'pod_ip': 595.9, 'running': 595.9, 'first_200': 599.4, 'ready': 807.7}
+wasm 3 {'pod_ip': 584.6, 'running': 584.6, 'first_200': 586.3, 'ready': 960.9}
+wasm 4 {'pod_ip': 575.3, 'running': 575.3, 'first_200': 579.1, 'ready': 846.3}
+wasm 5 {'pod_ip': 598.2, 'running': 598.2, 'first_200': 601.8, 'ready': 1000.4}
+wasm 6 {'pod_ip': 568.6, 'running': 568.6, 'first_200': 572.6, 'ready': 879.9}
+wasm 7 {'pod_ip': 581.8, 'running': 581.8, 'first_200': 584.6, 'ready': 1379.0}
+wasm 8 {'pod_ip': 560.0, 'running': 560.0, 'first_200': 562.7, 'ready': 918.5}
+wasm 9 {'pod_ip': 581.8, 'running': 581.8, 'first_200': 584.3, 'ready': 1382.2}
+wasm 10 {'pod_ip': 550.5, 'running': 550.5, 'first_200': 554.2, 'ready': 960.0}
+== container: warm-up run (discarded)
+container 1 {'pod_ip': 931.1, 'running': 931.1, 'first_200': 932.1, 'ready': 943.3}
+container 2 {'pod_ip': 587.7, 'running': 587.7, 'first_200': 588.6, 'ready': 597.8}
+container 3 {'pod_ip': 578.3, 'running': 578.3, 'first_200': 579.4, 'ready': 589.2}
+container 4 {'pod_ip': 576.5, 'running': 576.5, 'first_200': 577.2, 'ready': 591.8}
+container 5 {'pod_ip': 581.6, 'running': 581.6, 'first_200': 582.5, 'ready': 592.4}
+container 6 {'pod_ip': 709.6, 'running': 709.6, 'first_200': 710.6, 'ready': 720.5}
+container 7 {'pod_ip': 570.5, 'running': 570.5, 'first_200': 571.3, 'ready': 581.9}
+container 8 {'pod_ip': 546.9, 'running': 546.9, 'first_200': 547.9, 'ready': 556.4}
+container 9 {'pod_ip': 574.7, 'running': 574.7, 'first_200': 575.7, 'ready': 585.7}
+container 10 {'pod_ip': 566.5, 'running': 566.5, 'first_200': 567.4, 'ready': 578.9}
+
+workload  metric        median      min      max   (ms)
+wasm      pod_ip         581.8    550.5    598.2
+wasm      running        581.8    550.5    598.2
+wasm      first_200      584.5    554.2    601.8
+wasm      ready          960.5    807.7   1469.8
+container pod_ip         577.4    546.9    931.1
+container running        577.4    546.9    931.1
+container first_200      578.3    547.9    932.1
+container ready          590.5    556.4    943.3
