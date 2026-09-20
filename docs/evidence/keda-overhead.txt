@@ -1,0 +1,11 @@
+NAME                                                    CPU(cores)   MEMORY(bytes)   
+keda-add-ons-http-controller-manager-8699798fb6-hs2zq   3m           13Mi            
+keda-add-ons-http-external-scaler-64556859bc-bntjn      8m           15Mi            
+keda-add-ons-http-external-scaler-64556859bc-grlz7      6m           14Mi            
+keda-add-ons-http-external-scaler-64556859bc-wtlxc      13m          16Mi            
+keda-add-ons-http-interceptor-876d574bf-cd9hk           5m           13Mi            
+keda-add-ons-http-interceptor-876d574bf-hnb7s           5m           12Mi            
+keda-add-ons-http-interceptor-876d574bf-pcnnq           6m           13Mi            
+keda-admission-webhooks-58876db69c-pp98m                1m           11Mi            
+keda-operator-db67b55f6-ff42q                           9m           38Mi            
+keda-operator-metrics-apiserver-d75fdf797-zhxvj         6m           29Mi            

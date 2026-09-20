@@ -1,0 +1,50 @@
+== wasm: iteration 0 is a warm-up (discarded)
+wasm 0 {'workload': 'wasm', 'iter': 0, 'status': 200, 'total_ms': 2192.3, 'warm_ms': 1.59, 'keda_scaled': 737.9, 'pod_created': 763.2, 'running': 1907.1, 'ready': 2538.5}
+wasm 1 {'workload': 'wasm', 'iter': 1, 'status': 200, 'total_ms': 1988.9, 'warm_ms': 1.45, 'keda_scaled': 679.8, 'pod_created': 679.8, 'running': 1450.7, 'ready': 2450.4}
+wasm 2 {'workload': 'wasm', 'iter': 2, 'status': 200, 'total_ms': 1477.6, 'warm_ms': 1.51, 'keda_scaled': 624.0, 'pod_created': 652.3, 'running': 1467.4, 'ready': 1625.2}
+wasm 3 {'workload': 'wasm', 'iter': 3, 'status': 200, 'total_ms': 2041.5, 'warm_ms': 0.84, 'keda_scaled': 900.8, 'pod_created': 931.3, 'running': 1500.2, 'ready': 2902.8}
+wasm 4 {'workload': 'wasm', 'iter': 4, 'status': 200, 'total_ms': 2853.9, 'warm_ms': 1.44, 'keda_scaled': 488.4, 'pod_created': 518.1, 'running': 2101.3, 'ready': 3445.9}
+wasm 5 {'workload': 'wasm', 'iter': 5, 'status': 200, 'total_ms': 1508.7, 'warm_ms': 1.38, 'keda_scaled': 702.0, 'pod_created': 702.0, 'running': 1271.1, 'ready': 1706.5}
+wasm 6 {'workload': 'wasm', 'iter': 6, 'status': 200, 'total_ms': 2075.0, 'warm_ms': 0.76, 'keda_scaled': 1030.2, 'pod_created': 1030.2, 'running': 2000.7, 'ready': 2066.4}
+wasm 7 {'workload': 'wasm', 'iter': 7, 'status': 200, 'total_ms': 2402.7, 'warm_ms': 1.37, 'keda_scaled': 1029.0, 'pod_created': 1029.0, 'running': 1582.9, 'ready': 3000.1}
+wasm 8 {'workload': 'wasm', 'iter': 8, 'status': 200, 'total_ms': 1734.3, 'warm_ms': 1.53, 'keda_scaled': 670.6, 'pod_created': 670.6, 'running': 1524.0, 'ready': 1994.9}
+== container: iteration 0 is a warm-up (discarded)
+container 0 {'workload': 'container', 'iter': 0, 'status': 200, 'total_ms': 1001.2, 'warm_ms': 0.93, 'keda_scaled': 456.3, 'pod_created': 432.1, 'running': 986.4, 'ready': 1080.9}
+container 1 {'workload': 'container', 'iter': 1, 'status': 200, 'total_ms': 953.8, 'warm_ms': 0.89, 'keda_scaled': 404.0, 'pod_created': 404.0, 'running': 936.5, 'ready': 1398.8}
+container 2 {'workload': 'container', 'iter': 2, 'status': 200, 'total_ms': 846.4, 'warm_ms': 0.73, 'keda_scaled': 274.0, 'pod_created': 302.2, 'running': 833.2, 'ready': 1274.4}
+container 3 {'workload': 'container', 'iter': 3, 'status': 200, 'total_ms': 1397.0, 'warm_ms': 0.48, 'keda_scaled': 801.9, 'pod_created': 831.6, 'running': 1390.8, 'ready': 1390.8}
+container 4 {'workload': 'container', 'iter': 4, 'status': 200, 'total_ms': 1279.7, 'warm_ms': 0.8, 'keda_scaled': 383.9, 'pod_created': 412.2, 'running': 1260.7, 'ready': 1384.5}
+container 5 {'workload': 'container', 'iter': 5, 'status': 200, 'total_ms': 1750.5, 'warm_ms': 0.84, 'keda_scaled': 871.0, 'pod_created': 891.8, 'running': 1922.6, 'ready': 1922.6}
+container 6 {'workload': 'container', 'iter': 6, 'status': 200, 'total_ms': 1100.7, 'warm_ms': 0.75, 'keda_scaled': 514.8, 'pod_created': 489.5, 'running': 1431.5, 'ready': 1431.5}
+container 7 {'workload': 'container', 'iter': 7, 'status': 200, 'total_ms': 1888.9, 'warm_ms': 0.45, 'keda_scaled': 1000.7, 'pod_created': 1034.8, 'running': 1882.5, 'ready': 1882.5}
+container 8 {'workload': 'container', 'iter': 8, 'status': 200, 'total_ms': 1212.1, 'warm_ms': 0.82, 'keda_scaled': 333.8, 'pod_created': 363.0, 'running': 1193.2, 'ready': 1334.5}
+== python: iteration 0 is a warm-up (discarded)
+python 0 {'workload': 'python', 'iter': 0, 'status': 200, 'total_ms': 1520.9, 'warm_ms': 0.66, 'keda_scaled': 455.1, 'pod_created': 433.0, 'running': 991.1, 'ready': 1514.6}
+python 1 {'workload': 'python', 'iter': 1, 'status': 200, 'total_ms': 2227.7, 'warm_ms': 1.62, 'keda_scaled': 296.2, 'pod_created': 322.3, 'running': 1175.1, 'ready': 2320.4}
+python 2 {'workload': 'python', 'iter': 2, 'status': 200, 'total_ms': 2252.0, 'warm_ms': 0.71, 'keda_scaled': 632.1, 'pod_created': 659.9, 'running': 1625.9, 'ready': 2245.6}
+python 3 {'workload': 'python', 'iter': 3, 'status': 200, 'total_ms': 1557.8, 'warm_ms': 0.6, 'keda_scaled': 618.3, 'pod_created': 618.3, 'running': 1399.9, 'ready': 1553.5}
+python 4 {'workload': 'python', 'iter': 4, 'status': 200, 'total_ms': 1721.9, 'warm_ms': 1.52, 'keda_scaled': 506.3, 'pod_created': 533.9, 'running': 1366.7, 'ready': 1814.4}
+python 5 {'workload': 'python', 'iter': 5, 'status': 200, 'total_ms': 1741.5, 'warm_ms': 1.47, 'keda_scaled': 306.0, 'pod_created': 392.1, 'running': 1566.8, 'ready': 2010.0}
+python 6 {'workload': 'python', 'iter': 6, 'status': 200, 'total_ms': 1406.9, 'warm_ms': 1.22, 'keda_scaled': 622.4, 'pod_created': 651.4, 'running': 1402.8, 'ready': 1623.1}
+python 7 {'workload': 'python', 'iter': 7, 'status': 200, 'total_ms': 2512.2, 'warm_ms': 0.67, 'keda_scaled': 530.5, 'pod_created': 560.8, 'running': 1701.9, 'ready': 2505.9}
+python 8 {'workload': 'python', 'iter': 8, 'status': 200, 'total_ms': 1783.2, 'warm_ms': 1.43, 'keda_scaled': 473.9, 'pod_created': 508.5, 'running': 1028.6, 'ready': 2106.5}
+
+workload  metric          median      min      max   (ms)
+wasm      total_ms        2015.2   1477.6   2853.9
+wasm      keda_scaled      690.9    488.4   1030.2
+wasm      pod_created      690.9    518.1   1030.2
+wasm      running         1512.1   1271.1   2101.3
+wasm      ready           2258.4   1625.2   3445.9
+wasm      warm_ms            1.4      0.8      1.5
+container total_ms        1245.9    846.4   1888.9
+container keda_scaled      459.4    274.0   1000.7
+container pod_created      450.9    302.2   1034.8
+container running         1325.8    833.2   1922.6
+container ready           1394.8   1274.4   1922.6
+container warm_ms            0.8      0.5      0.9
+python    total_ms        1762.3   1406.9   2512.2
+python    keda_scaled      518.4    296.2    632.1
+python    pod_created      547.3    322.3    659.9
+python    running         1401.3   1028.6   1701.9
+python    ready           2058.2   1553.5   2505.9
+python    warm_ms            1.3      0.6      1.6

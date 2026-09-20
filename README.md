@@ -11,7 +11,7 @@ footprint, scale-to-zero and behaviour on a resource-constrained edge node.
 - [x] 2. Build WASM workload (Rust + spin-sdk)
 - [x] 3. Deploy WASM + container side by side
 - [x] 4. Cold-start & memory comparison
-- [ ] 5. Scale-to-zero test
+- [x] 5. Scale-to-zero test
 - [ ] 6. Edge simulation (1 vCPU / 512MB)
 - [ ] 7. Portability test (x86 vs ARM)
 - [ ] 8. Documentation & trade-off analysis

@@ -1,0 +1,107 @@
+apiVersion: http.keda.sh/v1beta1
+kind: InterceptorRoute
+metadata:
+  name: wasm-echo
+  namespace: default
+spec:
+  target:
+    service: wasm-echo
+    port: 80
+  rules:
+    - hosts:
+        - wasm-echo.example.com
+  scalingMetric:
+    requestRate:
+      targetValue: 100
+      window: 1m
+      granularity: 1s
+---
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: wasm-echo
+  namespace: default
+spec:
+  scaleTargetRef:
+    name: wasm-echo
+  minReplicaCount: 0
+  maxReplicaCount: 5
+  pollingInterval: 5
+  cooldownPeriod: 15
+  triggers:
+    - type: external-push
+      metadata:
+        scalerAddress: keda-add-ons-http-external-scaler.keda:9090
+        interceptorRoute: wasm-echo
+---
+apiVersion: http.keda.sh/v1beta1
+kind: InterceptorRoute
+metadata:
+  name: container-echo
+  namespace: default
+spec:
+  target:
+    service: container-echo
+    port: 80
+  rules:
+    - hosts:
+        - container-echo.example.com
+  scalingMetric:
+    requestRate:
+      targetValue: 100
+      window: 1m
+      granularity: 1s
+---
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: container-echo
+  namespace: default
+spec:
+  scaleTargetRef:
+    name: container-echo
+  minReplicaCount: 0
+  maxReplicaCount: 5
+  pollingInterval: 5
+  cooldownPeriod: 15
+  triggers:
+    - type: external-push
+      metadata:
+        scalerAddress: keda-add-ons-http-external-scaler.keda:9090
+        interceptorRoute: container-echo
+---
+apiVersion: http.keda.sh/v1beta1
+kind: InterceptorRoute
+metadata:
+  name: container-python
+  namespace: default
+spec:
+  target:
+    service: container-python
+    port: 80
+  rules:
+    - hosts:
+        - container-python.example.com
+  scalingMetric:
+    requestRate:
+      targetValue: 100
+      window: 1m
+      granularity: 1s
+---
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: container-python
+  namespace: default
+spec:
+  scaleTargetRef:
+    name: container-python
+  minReplicaCount: 0
+  maxReplicaCount: 5
+  pollingInterval: 5
+  cooldownPeriod: 15
+  triggers:
+    - type: external-push
+      metadata:
+        scalerAddress: keda-add-ons-http-external-scaler.keda:9090
+        interceptorRoute: container-python
