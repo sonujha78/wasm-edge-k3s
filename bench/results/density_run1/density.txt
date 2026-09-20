@@ -1,0 +1,41 @@
+== phase 1: replica sweep
+{'phase': 'sweep', 'workload': 'wasm', 'target': 1, 'ready': 1, 'host_delta_mib': -122.3, 'per_pod_host_mib': -122.35, 'cgroup_top_mib': 4.0, 'per_pod_cgroup_mib': 4.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'wasm', 'target': 5, 'ready': 5, 'host_delta_mib': -101.9, 'per_pod_host_mib': -20.39, 'cgroup_top_mib': 21.0, 'per_pod_cgroup_mib': 4.2, 'note': ''}
+{'phase': 'sweep', 'workload': 'wasm', 'target': 10, 'ready': 10, 'host_delta_mib': -26.2, 'per_pod_host_mib': -2.62, 'cgroup_top_mib': 40.0, 'per_pod_cgroup_mib': 4.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'wasm', 'target': 20, 'ready': 20, 'host_delta_mib': 127.6, 'per_pod_host_mib': 6.38, 'cgroup_top_mib': 80.0, 'per_pod_cgroup_mib': 4.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'wasm', 'target': 40, 'ready': 40, 'host_delta_mib': 540.3, 'per_pod_host_mib': 13.51, 'cgroup_top_mib': 160.0, 'per_pod_cgroup_mib': 4.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'container', 'target': 1, 'ready': 1, 'host_delta_mib': 53.7, 'per_pod_host_mib': 53.66, 'cgroup_top_mib': 0.0, 'per_pod_cgroup_mib': 0.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'container', 'target': 5, 'ready': 5, 'host_delta_mib': 52.6, 'per_pod_host_mib': 10.53, 'cgroup_top_mib': 0.0, 'per_pod_cgroup_mib': 0.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'container', 'target': 10, 'ready': 10, 'host_delta_mib': 30.4, 'per_pod_host_mib': 3.04, 'cgroup_top_mib': 0.0, 'per_pod_cgroup_mib': 0.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'container', 'target': 20, 'ready': 20, 'host_delta_mib': 120.4, 'per_pod_host_mib': 6.02, 'cgroup_top_mib': 0.0, 'per_pod_cgroup_mib': 0.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'container', 'target': 40, 'ready': 40, 'host_delta_mib': 340.2, 'per_pod_host_mib': 8.51, 'cgroup_top_mib': 1.0, 'per_pod_cgroup_mib': 0.03, 'note': ''}
+{'phase': 'sweep', 'workload': 'python', 'target': 1, 'ready': 1, 'host_delta_mib': 62.6, 'per_pod_host_mib': 62.64, 'cgroup_top_mib': 41.0, 'per_pod_cgroup_mib': 41.0, 'note': ''}
+{'phase': 'sweep', 'workload': 'python', 'target': 5, 'ready': 5, 'host_delta_mib': 265.4, 'per_pod_host_mib': 53.08, 'cgroup_top_mib': 199.0, 'per_pod_cgroup_mib': 39.8, 'note': ''}
+{'phase': 'sweep', 'workload': 'python', 'target': 10, 'ready': 10, 'host_delta_mib': 406.0, 'per_pod_host_mib': 40.6, 'cgroup_top_mib': 395.0, 'per_pod_cgroup_mib': 39.5, 'note': ''}
+== phase 2: 512Mi ResourceQuota
+{'phase': 'quota', 'workload': 'wasm', 'target': 200, 'ready': 64, 'host_delta_mib': 626.6, 'per_pod_host_mib': 9.79, 'cgroup_top_mib': 267.0, 'per_pod_cgroup_mib': 4.17, 'note': 'quota math fits 64'}
+{'phase': 'quota', 'workload': 'container', 'target': 200, 'ready': 95, 'host_delta_mib': 673.3, 'per_pod_host_mib': 7.09, 'cgroup_top_mib': 0.0, 'per_pod_cgroup_mib': 0.0, 'note': 'quota math fits 128'}
+{'phase': 'quota', 'workload': 'python', 'target': 200, 'ready': 10, 'host_delta_mib': 312.1, 'per_pod_host_mib': 31.21, 'cgroup_top_mib': 392.0, 'per_pod_cgroup_mib': 39.2, 'note': 'quota math fits 10'}
+
+phase  workload    target  ready  host MiB    /pod  cgroup MiB    /pod
+sweep  wasm             1      1    -122.3 -122.35         4.0     4.0   
+sweep  wasm             5      5    -101.9  -20.39        21.0     4.2   
+sweep  wasm            10     10     -26.2   -2.62        40.0     4.0   
+sweep  wasm            20     20     127.6    6.38        80.0     4.0   
+sweep  wasm            40     40     540.3   13.51       160.0     4.0   
+sweep  container        1      1      53.7   53.66         0.0     0.0   
+sweep  container        5      5      52.6   10.53         0.0     0.0   
+sweep  container       10     10      30.4    3.04         0.0     0.0   
+sweep  container       20     20     120.4    6.02         0.0     0.0   
+sweep  container       40     40     340.2    8.51         1.0    0.03   
+sweep  python           1      1      62.6   62.64        41.0    41.0   
+sweep  python           5      5     265.4   53.08       199.0    39.8   
+sweep  python          10     10     406.0    40.6       395.0    39.5   
+quota  wasm           200     64     626.6    9.79       267.0    4.17   quota math fits 64
+quota  container      200     95     673.3    7.09         0.0     0.0   quota math fits 128
+quota  python         200     10     312.1   31.21       392.0    39.2   quota math fits 10
+
+marginal host cost per extra pod (sweep):
+  wasm      17.0 MiB/pod  (N=1..40)
+  container 7.3 MiB/pod  (N=1..40)
+  python    38.2 MiB/pod  (N=1..10)

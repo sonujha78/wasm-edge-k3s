@@ -1,0 +1,17 @@
+phase,workload,target,ready,host_delta_mib,per_pod_host_mib,cgroup_top_mib,per_pod_cgroup_mib,note
+sweep,wasm,1,1,-122.3,-122.35,4.0,4.0,
+sweep,wasm,5,5,-101.9,-20.39,21.0,4.2,
+sweep,wasm,10,10,-26.2,-2.62,40.0,4.0,
+sweep,wasm,20,20,127.6,6.38,80.0,4.0,
+sweep,wasm,40,40,540.3,13.51,160.0,4.0,
+sweep,container,1,1,53.7,53.66,0.0,0.0,
+sweep,container,5,5,52.6,10.53,0.0,0.0,
+sweep,container,10,10,30.4,3.04,0.0,0.0,
+sweep,container,20,20,120.4,6.02,0.0,0.0,
+sweep,container,40,40,340.2,8.51,1.0,0.03,
+sweep,python,1,1,62.6,62.64,41.0,41.0,
+sweep,python,5,5,265.4,53.08,199.0,39.8,
+sweep,python,10,10,406.0,40.6,395.0,39.5,
+quota,wasm,200,64,626.6,9.79,267.0,4.17,quota math fits 64
+quota,container,200,95,673.3,7.09,0.0,0.0,quota math fits 128
+quota,python,200,10,312.1,31.21,392.0,39.2,quota math fits 10
