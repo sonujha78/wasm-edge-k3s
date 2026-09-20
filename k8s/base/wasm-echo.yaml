@@ -16,6 +16,7 @@ spec:
         app: wasm-echo
         workload-type: wasm
     spec:
+      terminationGracePeriodSeconds: 2
       runtimeClassName: wasmtime-spin-v2
       containers:
       - name: wasm-echo

@@ -16,6 +16,7 @@ spec:
         app: container-echo
         workload-type: container
     spec:
+      terminationGracePeriodSeconds: 2
       containers:
       - name: container-echo
         image: localhost:5000/container-echo:v1

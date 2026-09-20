@@ -1,0 +1,20 @@
+[wasm] pod=wasm-echo-78555b546b-j4ws2 ip=10.42.0.26 -> settling 30s for idle reading
+[wasm] light load: wrk -t2 -c20 -d30s
+    Latency     1.89ms    2.31ms  44.53ms   99.13%
+    Latency Distribution
+    50%    1.62ms
+    99%    3.73ms
+    Requests/sec:  11599.88
+[container] pod=container-echo-59fdf5859d-95jmc ip=10.42.0.37 -> settling 30s for idle reading
+[container] light load: wrk -t2 -c20 -d30s
+    Latency     4.19ms    4.27ms  23.43ms   82.31%
+    Latency Distribution
+    50%    2.46ms
+    99%   15.90ms
+    Requests/sec:   2043.00
+
+workload  phase   cg_workset   cg_anon   cg_peak  proc_pss  #procs   (MiB)
+wasm      idle          5.87      3.12      6.88     43.57       6
+wasm      load         25.16     22.34     28.16     62.78       6
+container idle          0.96      0.07      5.79      6.96       3
+container load          3.00      0.07     13.50      7.04       3

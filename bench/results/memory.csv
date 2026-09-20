@@ -1,0 +1,5 @@
+workload,phase,cg_working_set,cg_anon,cg_peak,proc_pss,nprocs
+wasm,idle,6152192,3268608,7208960,45684736,6
+wasm,load,26386432,23420928,29528064,65832960,6
+container,idle,1011712,77824,6066176,7302144,3
+container,load,3149824,73728,14155776,7384064,3
