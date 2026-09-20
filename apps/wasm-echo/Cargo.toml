@@ -1,0 +1,16 @@
+[package]
+name = "wasm-echo"
+authors = ["Sonu <sonu@example.com>"]
+description = ""
+version = "0.1.0"
+rust-version = "1.93"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+anyhow = "1"
+spin-sdk = "6.0.0"
+
+[workspace]
