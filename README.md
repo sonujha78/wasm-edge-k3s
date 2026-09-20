@@ -7,7 +7,7 @@ regular containers in the same K3s cluster, and benchmarks cold start, memory
 footprint, scale-to-zero and behaviour on a resource-constrained edge node.
 
 ## Status
-- [ ] 1. Environment setup (K3s + wasm shims)
+- [x] 1. Environment setup (K3s + wasm shims)
 - [ ] 2. Build WASM workload (Rust + spin-sdk)
 - [ ] 3. Deploy WASM + container side by side
 - [ ] 4. Cold-start & memory comparison
